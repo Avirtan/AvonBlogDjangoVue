@@ -75,7 +75,7 @@ async function deletePost() {
                         @click="() => router.push({ name: 'createPost' })"
                     />
                     <q-btn
-                        class="q-ml-sm"
+                        class="q-ma-sm"
                         color="primary"
                         label="Удалить статью"
                         @click="deletePost"

@@ -8,7 +8,7 @@ const router = useRouter()
 const posts = ref([] as any)
 onMounted(async () => {
     const data: any = await PostService.GetPostsPage()
-    console.log(posts.value.lenght)
+    //console.log(posts.value.lenght)
     posts.value = data["posts"]
 });
 const name = ref("")
