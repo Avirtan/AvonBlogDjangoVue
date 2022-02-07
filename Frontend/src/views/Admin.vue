@@ -27,6 +27,7 @@ const columns = [
 const posts = ref([] as any)
 
 onMounted(async () => {
+    document.title = 'Администрирование'
     try {
         const resp = await store.dispatch(UserMutatuinTypes.CheckToken)
         PostService.SetHeader()

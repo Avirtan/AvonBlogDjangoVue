@@ -7,6 +7,7 @@ import { useRouter } from "vue-router";
 const router = useRouter()
 const posts = ref([] as any)
 onMounted(async () => {
+    document.title = 'Главная'
     const data: any = await PostService.GetPostsPage()
     //console.log(posts.value.lenght)
     posts.value = data["posts"]

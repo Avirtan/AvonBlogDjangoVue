@@ -14,36 +14,57 @@ const routes: Array<RouteRecordRaw> = [
         path: "/",
         name: "home",
         component: Home,
+        meta:{
+            title:"Главная"
+        },
     },
     {
         path: "/posts",
         name: "posts",
         component: Blog,
+        meta:{
+            title:"Блог"
+        }
     },
     {
         path: "/post/:id",
         name: "post",
         component: BlogView,
+        meta:{
+            title:"Статья"
+        }
     },
     {
         path: "/admin/login",
         name: "login",
         component: AdminLogin,
+        meta:{
+            title:"Авторизация"
+        }
     },
     {
         path: "/admin",
         name: "admin",
         component: Admin,
+        meta:{
+            title:"Администрирование"
+        }
     },
     {
         path: "/admin/post/:id",
         name: "editPost",
         component: AdminEditPost,
+        meta:{
+            title:"Редактирование статьи"
+        }
     },
     {
         path: "/admin/createPost",
         name: "createPost",
         component: AdminCreatePost,
+        meta:{
+            title:"Создание статьи"
+        },
     },
 ];
 

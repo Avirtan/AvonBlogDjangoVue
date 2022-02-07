@@ -7,6 +7,7 @@ const posts = ref([] as any)
 const current = ref(1)
 const countPage = ref(1)
 onMounted(async () => {
+    document.title = 'Блог'
     const data: any = await PostService.GetPostsPage()
     posts.value = data["posts"]
     countPage.value = data["countPage"]
