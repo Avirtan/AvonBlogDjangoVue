@@ -8,6 +8,7 @@ const router = useRouter()
 const posts = ref([] as any)
 onMounted(async () => {
     const data: any = await PostService.GetPostsPage()
+    console.log(posts.value.lenght)
     posts.value = data["posts"]
 });
 const name = ref("")
@@ -85,7 +86,7 @@ async function onSubmit() {
                     <q-parallax
                         :height="600"
                         :speed="2"
-                        src="https://www.peoples.ru/state/king/russia/putin/CP2BhprwldLzu.jpeg"
+                        src="https://avonkatalogs.ru/012022/1_m.jpg"
                     ></q-parallax>
                 </div>
             </div>
@@ -162,7 +163,7 @@ async function onSubmit() {
                 />
             </q-form>
         </div>
-        <div class="text-center text-h3 q-ma-xl" v-if="posts">Мой блог</div>
+        <div class="text-center text-h3 q-ma-xl" >Мой блог</div>
         <div class="q-gutter-xl row justify-around">
             <div class="col-xs-11 col-sm-5 col-md-5" v-for="(post, index) in posts" :key="index">
                 <q-card

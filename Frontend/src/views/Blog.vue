@@ -27,7 +27,7 @@ async function onLoad(index: any, done: () => void) {
 <template>
     <q-page>
         <q-infinite-scroll @load="onLoad" :offset="250" id="scroll">
-            <div class="text-center text-h3 q-mt-xl" v-if="!posts">Нет статей</div>
+            <div class="text-center text-h3 q-mt-xl" v-if="posts.lenght == undefined">Нет статей</div>
             <div class="q-pt-md q-gutter-lg row justify-center">
                 <vBlogCard :post="post" :id="post.id" v-for="(post, index) in posts" :key="index" />
             </div>
