@@ -14,9 +14,10 @@ onMounted(async () => {
 
 async function onLoad(index: any, done: () => void) {
     current.value = index
-    if (countPage.value > 0 && index < countPage.value) {
-        console.log(index)
-        const data: any = await PostService.GetPostsPage(index.toString())
+    if (countPage.value > 0 && index < countPage.value) {  
+        current.value+=1
+        console.log(current.value)
+        const data: any = await PostService.GetPostsPage(current.value.toString())
         posts.value.push(...data["posts"])
         done()
     }
