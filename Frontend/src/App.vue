@@ -107,8 +107,10 @@ const width = computed(() => windowWidth.value)
 }
 body {
     background-color: rgb(240, 240, 240);
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 .q-tab__label {
     font-weight: bold;
 }
+
 </style>

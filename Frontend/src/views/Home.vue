@@ -55,13 +55,11 @@ async function onSubmit() {
                 </div>
             </template>
         </q-parallax>
-        <div>
+        <div class="q-mt-md">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <div class="column justify-evenly items-center q-ma-md full-height">
-                        <span
-                            class="text-center text-h4 "
-                        >Обо мне</span>
+                        <span class="text-center text-h4">Обо мне</span>
                         <span
                             class
                             style="font-size: 20px;"
@@ -86,7 +84,7 @@ async function onSubmit() {
                         />
                     </div>
                 </div>
-                <div class="col q-ma-md">
+                <div class="col ">
                     <q-parallax
                         :height="600"
                         :speed="2"
@@ -95,9 +93,9 @@ async function onSubmit() {
                 </div>
             </div>
         </div>
-        <div>
+        <div id="form" class="q-pb-xl q-mt-xl">
             <div class="text-center text-h4 q-ma-xl">Заполните анкету, чтобы присоединиться к AVON</div>
-            <q-form @submit="onSubmit" class="q-gutter-md row justify-center">
+            <q-form  @submit="onSubmit" class="q-gutter-md row justify-center">
                 <q-input
                     filled
                     v-model="name"
@@ -168,9 +166,9 @@ async function onSubmit() {
             </q-form>
         </div>
         <div class="text-center text-h3 q-ma-xl">Мой блог</div>
-        <div class="q-gutter-xl row justify-around">
-            <div class="col-xs-11 col-sm-5 col-md-5" v-for="(post, index) in posts" :key="index">
-                <q-card
+        <div class="q-gutter-y-lg row justify-center">
+            <div class="col-xs-11 col-sm-5 col-md-6" :class="index%2==0?'q-pr-md':'q-pl-md'" v-for="(post, index) in posts" :key="index">
+                <q-card 
                     class="full-width"
                     style="display: flex; flex-direction: column; justify-content: space-between"
                 >
@@ -195,4 +193,9 @@ async function onSubmit() {
     </q-page>
 </template>
 
-<style></style>
+<style>
+#form {
+    border: 2px solid #a50799;
+    border-radius: 4px;
+}
+</style>

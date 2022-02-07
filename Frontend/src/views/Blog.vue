@@ -40,3 +40,7 @@ async function onLoad(index: any, done: () => void) {
         </q-infinite-scroll>
     </q-page>
 </template>
+
+<style>
+
+</style>
