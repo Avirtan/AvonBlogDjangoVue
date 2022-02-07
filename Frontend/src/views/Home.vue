@@ -59,6 +59,9 @@ async function onSubmit() {
                 <div class="col-sm-12 col-md-6">
                     <div class="column justify-evenly items-center q-ma-md full-height">
                         <span
+                            class="text-center text-h4 "
+                        >Обо мне</span>
+                        <span
                             class
                             style="font-size: 20px;"
                         >Proident sint eiusmod reprehenderit exercitation eiusmod excepteur exercitation dolor ex laboris dolore ipsum ullamco. Deserunt fugiat non aliqua nostrud ut incididunt. Ullamco aliqua quis mollit et. Anim reprehenderit ullamco reprehenderit qui excepteur ullamco. Sit consequat veniam culpa laborum excepteur irure enim do mollit labore esse ullamco. Laborum est ullamco qui proident magna in proident consequat nostrud.</span>
@@ -93,7 +96,7 @@ async function onSubmit() {
         </div>
         <div>
             <div class="text-center text-h4 q-ma-xl">Заполните анкету, чтобы присоединиться к AVON</div>
-            <q-form @submit="onSubmit"  class="q-gutter-md row justify-center">
+            <q-form @submit="onSubmit" class="q-gutter-md row justify-center">
                 <q-input
                     filled
                     v-model="name"
@@ -163,7 +166,7 @@ async function onSubmit() {
                 />
             </q-form>
         </div>
-        <div class="text-center text-h3 q-ma-xl" >Мой блог</div>
+        <div class="text-center text-h3 q-ma-xl">Мой блог</div>
         <div class="q-gutter-xl row justify-around">
             <div class="col-xs-11 col-sm-5 col-md-5" v-for="(post, index) in posts" :key="index">
                 <q-card

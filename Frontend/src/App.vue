@@ -61,7 +61,7 @@ const width = computed(() => windowWidth.value)
             </q-item>
         </q-drawer>
         <q-page-container class="row justify-center q-gutter-md q-pa-md">
-            <div class="col-xs-12 col-md-9">
+            <div class="col-xs-12 col-md-8">
                 <router-view />
                 <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
                     <q-btn fab icon="keyboard_arrow_up" />
